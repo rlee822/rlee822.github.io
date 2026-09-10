@@ -3,12 +3,15 @@ project:
   output-dir: docs
 
 website:
-  title: "Rachel's website"
+  title: "Tin Yan Rachel Lee"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: blog.qmd
+        text: Blog
 
 format:
   html:
