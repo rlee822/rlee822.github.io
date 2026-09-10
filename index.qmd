@@ -1,0 +1,13 @@
+---
+title: "Tin Yan Rachel Lee"
+---
+
+![](images/propic.jpg){width=200px} 
+
+Hi everyone! I came from Hong Kong and had been living in Toronto for four years before MDS. Through my work in education marketing and healthcare advocacy, I have seen how data can shape decisions which cause significant social and business impact. In this program, I would like to learn more about how to use data to make predictions which drive informed decisions. Apart from work and learning, I love hiking and tennis:)
+
+
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
