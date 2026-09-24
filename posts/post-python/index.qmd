@@ -3,27 +3,7 @@ title: "Python with penguins"
 author: "Tin Yan Rachel Lee"
 date: "2026-09-23"
 ---
-data: Palmer Penguins, collected by Palmer Station Antarctica LTER.
-
-citation("palmerpenguins")
-#> 
-#> To cite palmerpenguins in publications use:
-#> 
-#>   Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
-#>   Archipelago (Antarctica) penguin data. R package version 0.1.0.
-#>   https://allisonhorst.github.io/palmerpenguins/. doi:
-#>   10.5281/zenodo.3960218.
-#> 
-#> A BibTeX entry for LaTeX users is
-#> 
-#>   @Manual{,
-#>     title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data},
-#>     author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman},
-#>     year = {2020},
-#>     note = {R package version 0.1.0},
-#>     doi = {10.5281/zenodo.3960218},
-#>     url = {https://allisonhorst.github.io/palmerpenguins/},
-#>   }
+data: Palmer Archipelago (Antarctica) penguin data (https://allisonhorst.github.io/palmerpenguins/)
 
 ```{python}
 
