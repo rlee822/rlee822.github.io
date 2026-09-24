@@ -195,9 +195,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>data: Palmer Penguins, collected by Palmer Station Antarctica LTER.</p>
-<p>citation(“palmerpenguins”) #&gt; #&gt; To cite palmerpenguins in publications use: #&gt; #&gt; Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer #&gt; Archipelago (Antarctica) penguin data. R package version 0.1.0. #&gt; https://allisonhorst.github.io/palmerpenguins/. doi: #&gt; 10.5281/zenodo.3960218. #&gt; #&gt; A BibTeX entry for LaTeX users is #&gt; #&gt; <span class="citation" data-cites="Manual">@Manual</span>{, #&gt; title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data}, #&gt; author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman}, #&gt; year = {2020}, #&gt; note = {R package version 0.1.0}, #&gt; doi = {10.5281/zenodo.3960218}, #&gt; url = {https://allisonhorst.github.io/palmerpenguins/}, #&gt; }</p>
-<div id="9e4a3ae4" class="cell" data-message="false" data-execution_count="1">
+<p>data: Palmer Archipelago (Antarctica) penguin data (https://allisonhorst.github.io/palmerpenguins/)</p>
+<div id="733fe889" class="cell" data-message="false" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> palmerpenguins</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -286,7 +285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>In this post, we would explore the different in mass in the penguins considering their gender and species.</p>
 <p>Before the analysis, the data must be cleaned. Observations containing missing values are dropped.</p>
-<div id="1d8b370e" class="cell" data-execution_count="2">
+<div id="6ae6c053" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>clean_penguins <span class="op">=</span> df.dropna()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>clean_penguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -438,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Next, we would like to confirm if there is a mass difference between male and female penguins in general among the three species.</p>
-<div id="72a73113" class="cell" data-execution_count="3">
+<div id="2e96cbf5" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mass_difference <span class="op">=</span> (</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    clean_penguins</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    .groupby(<span class="st">"sex"</span>, as_index<span class="op">=</span><span class="va">False</span>)</span>

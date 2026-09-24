@@ -42,11 +42,9 @@ Last but not least, we create a boxplot to compare the mass between the three sp
 
 ```{r}
 
-##### mass difference between species
-
 #| label: fig-penguin-mass
 #| fig-cap: "Body mass of penguins by species."
 
 ggplot(penguins, aes(x = species, y = body_mass_g)) +
-  geom_boxplot()
+  geom_boxplot(na.rm = TRUE)
 ```

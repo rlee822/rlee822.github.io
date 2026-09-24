@@ -192,8 +192,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>data: Palmer Penguins, collected by Palmer Station Antarctica LTER.</p>
-<p>citation(“palmerpenguins”) #&gt; #&gt; To cite palmerpenguins in publications use: #&gt; #&gt; Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer #&gt; Archipelago (Antarctica) penguin data. R package version 0.1.0. #&gt; https://allisonhorst.github.io/palmerpenguins/. doi: #&gt; 10.5281/zenodo.3960218. #&gt; #&gt; A BibTeX entry for LaTeX users is #&gt; #&gt; <span class="citation" data-cites="Manual">@Manual</span>{, #&gt; title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data}, #&gt; author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman}, #&gt; year = {2020}, #&gt; note = {R package version 0.1.0}, #&gt; doi = {10.5281/zenodo.3960218}, #&gt; url = {https://allisonhorst.github.io/palmerpenguins/}, #&gt; }</p>
+<p>data: Palmer Archipelago (Antarctica) penguin data (https://allisonhorst.github.io/palmerpenguins/)</p>
 <p>In this post, we would explore the different in mass in the penguins considering their gender and species.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
@@ -240,17 +239,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Last but not least, we create a boxplot to compare the mass between the three species. According to the figure, Gentoo is significant heavier than the other two species. The average mass of Adelie and Chinstrap are similar but the distribution of mass of Adelie is greater.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="do">##### mass difference between species</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-penguin-mass</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of penguins by species."</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing non-finite outside the scale range
-(`stat_boxplot()`).</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#| label: fig-penguin-mass</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| fig-cap: "Body mass of penguins by species."</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(penguins, <span class="fu">aes</span>(<span class="at">x =</span> species, <span class="at">y =</span> body_mass_g)) <span class="sc">+</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
