@@ -35,7 +35,7 @@ mass_difference <- clean_penguins |>
   group_by(sex) |>
   summarize(mean_mass = mean(body_mass_g))
 
-mass_difference
+mass_difference 
 ```
 
 Last but not least, we create a boxplot to compare the mass between the three species. According to the figure, Gentoo is significant heavier than the other two species. The average mass of Adelie and Chinstrap are similar but the distribution of mass of Adelie is greater.
