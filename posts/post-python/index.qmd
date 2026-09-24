@@ -1,0 +1,81 @@
+---
+title: "Python with penguins"
+author: "Tin Yan Rachel Lee"
+date: "2026-09-23"
+---
+data: Palmer Penguins, collected by Palmer Station Antarctica LTER.
+
+citation("palmerpenguins")
+#> 
+#> To cite palmerpenguins in publications use:
+#> 
+#>   Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
+#>   Archipelago (Antarctica) penguin data. R package version 0.1.0.
+#>   https://allisonhorst.github.io/palmerpenguins/. doi:
+#>   10.5281/zenodo.3960218.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Manual{,
+#>     title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data},
+#>     author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman},
+#>     year = {2020},
+#>     note = {R package version 0.1.0},
+#>     doi = {10.5281/zenodo.3960218},
+#>     url = {https://allisonhorst.github.io/palmerpenguins/},
+#>   }
+
+```{python}
+
+#| message: false
+#| warning: false
+
+import pandas as pd
+import palmerpenguins
+import matplotlib.pyplot as plt
+
+df = palmerpenguins.load_penguins()
+df.head()
+```
+
+In this post, we would explore the different in mass in the penguins considering their gender and species.
+
+Before the analysis, the data must be cleaned. Observations containing missing values are dropped.
+
+```{python}
+clean_penguins = df.dropna()
+
+clean_penguins
+```
+
+Next, we would like to confirm if there is a mass difference between male and female penguins in general among the three species.
+
+```{python}
+mass_difference = (
+    clean_penguins
+    .groupby("sex", as_index=False)
+    .agg(mean_mass=("body_mass_g", "mean"))
+)
+
+mass_difference
+```
+
+Last but not least, we create a boxplot to compare the mass between the three species. According to the figure, Gentoo is significant heavier than the other two species. The average mass of Adelie and Chinstrap are similar but the distribution of mass of Adelie is greater.
+
+```{python}
+#| label: fig-penguin-mass
+#| fig-cap: "Body mass of penguins by species."
+
+clean_penguins.boxplot(
+    column="body_mass_g",
+    by="species"
+)
+
+plt.xlabel("Species")
+plt.ylabel("Body mass (g)")
+plt.title("")
+plt.suptitle("")
+plt.show()  
+```
+
+

@@ -1,2 +1,11 @@
 /.quarto/
 **/*.quarto_ipynb
+.DS_Store
+**/.DS_Store
+_site/
+.venv/
+renv/library/
+.Rhistory
+**/.Rhistory
+renv/.gitignore
+renv/settings.json
